@@ -1,0 +1,217 @@
+@charset "utf-8";
+/*
+Yury Kanygin portfolio website
+    Created on : 25-May-2018, 11:27:50  
+    Author     : Galina Davies
+*/
+/*@import "https://www.icce.uk/css/ms.css";*/
+@import "https://www.icce.uk/css/mobile.css" screen and (max-width: 1080px);
+html {background-color: white;
+}
+* {
+    box-sizing: border-box;
+    
+}
+
+
+/* For devices 800px and larger: */
+@media only screen and (min-device-width: 1081px) {
+  
+body {
+    color: black;
+    background-color: white;
+    background-repeat: no-repeat;
+    font-family: Georgia, Verdana, Futura, Times;
+    font-size: 1rem;
+line-height: 2em;
+
+      
+}
+
+h1, h2, h3 {
+    color: grey;   
+    font-family: Times, Georgia, Verdana, Futura;
+    font-size: 1.2em;
+   
+}
+
+
+.grid-container {
+  display: grid;
+  grid:                 "mainheader mainheader nav nav"
+                        "sidenav main main skills"
+                        "article7 article7 article7 figure7"
+                        "article6 article6 article6 figure6"
+                        "figure5 article5 article5 article5"
+                        "article4 article4 article4 figure4"
+                        "figure3 article3 article3 article3"
+                        "article2 article2 article2 figure2"
+                        ". article1 article1 article1"
+                        ". article0 article0 ."
+                        "footer footer footer footer";
+                        
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+   grid-template-rows:  auto auto auto auto auto auto auto auto auto auto 1fr;
+  background-color: white;
+}}
+
+#mainheader {
+    grid-area: mainheader;
+    display: block;
+    color: #60699c; 
+    font-size: 1rem;
+    line-height: 1.1em;
+    text-align: right;
+    background-color: #eee7ff;
+    padding-top: 5px;
+    padding-right: 10px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+}
+
+
+nav  {
+ grid-area: nav;
+ display: flex; 
+ justify-content: space-around;
+ background-color: #eee7ff;
+ text-decoration: none; 
+ font-size: 1em;
+ text-align: center;
+}
+
+nav a {
+    float: right;
+    text-decoration: none;
+    padding-top: 15px;
+    padding-right: 20px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    text-align: center;
+   
+}
+nav a:hover {
+    /* Change the link color on hover */
+    color: black;
+    border: 1px solid blue;
+    
+}
+
+#sidenav {
+  display: flex;
+  margin-top: 10px;
+  flex-flow: column;
+  justify-content: space-around;
+}
+#sidenav a {
+    float: left;
+    background-color: #eee7ff;
+    font-size: 1em;
+    border: 1px solid white;
+}
+   /* Change the link color on hover */
+#sidenav a:hover {
+    color: black;
+    border: 1px solid blue;
+
+}
+/* Moving year of job to the left */
+#year {
+    float: left;
+    color: black;
+    font-size: 0.8em;
+}
+article {
+    display: block;
+ padding: 10px;   
+
+}
+#article0 {grid-area: article0}
+#main {grid-area: main;}
+#article1 {grid-area: article1;}
+#article2 {grid-area: article2;}
+#article3 {grid-area: article3;}
+#article4 {grid-area: article4}
+#article5 {grid-area: article5}
+#article6 {grid-area: article6}
+#article7 {grid-area: article7}
+#sidenav {grid-area: sidenav;}
+#skills {grid-area: skills;}
+#figure1 {grid-area: figure1}
+#figure2 {grid-area: figure2}
+#figure3 {grid-area: figure3}
+#figure4 {grid-area: figure4}
+#figure5 {grid-area: figure5}
+#figure6 {grid-area: figure6}
+#figure7 {grid-area: figure7}
+footer {grid-area: footer}
+
+#article0, #article1, #article2, #article3, #article4, #article5, #article6, #article7, #main, #skills {
+    display: block;
+    background-color: white;
+  width: 100%;
+  height: auto;
+  background-repeat: no-repeat;
+  padding: 10px;
+  text-align:justify;
+  text-decoration: none;
+}
+
+a {
+text-decoration: none;
+}    
+
+#main {
+    margin: 40px 20px 2px 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-indent: 40px;
+    
+}
+
+#skills {
+    padding-left: 30px;
+    
+}
+
+#figure1, #figure2, #figure3, #figure4, #figure5, #figure6, #figure7 {
+    
+display: flex;
+  margin-top: 50px;
+  flex-flow: column;
+  justify-content: space-around;
+    
+}
+.round {
+    display: block;
+    border-radius: 50%;
+    float: left;
+    width: 60px;
+}
+.png {
+    display:block;
+    height: 40px;
+    
+}
+  
+.title {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: DarkSlateGray;
+    
+}    
+
+
+#top { 
+  position: fixed ;
+  right: 0 ;
+  bottom: 0 ;
+  z-index: 1 ;
+
+}
+
+footer {
+    
+    background-color: lightgrey;
+    text-align: center;
+}
